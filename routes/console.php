@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('comando:teste_closure {parametro}', function ($parametro) {
+    $this->info("Mensagem sobre o comando declarado via closure com parâmetro \"{$parametro}\"");
+})->purpose("Declaração do comando teste closure");
